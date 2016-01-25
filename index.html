@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
- 
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta http-equiv="pragma" content="yes"/>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,16 +14,15 @@
         <!-- Set the background colour of the document -->
         <style>
             body {
+              background: #222;
               color:#cccccc;
               margin: 0px;
               padding: 0px;
               border: 0px;
-			  background:url(bck.jpg);
             }
             canvas {
                       image-rendering: optimizeSpeed;
                       -webkit-interpolation-mode: nearest-neighbor;
-                      -ms-touch-action: none;
                       margin: 0px;
                       padding: 0px;
                       border: 0px;
@@ -35,7 +33,11 @@
             }
             div.gm4html5_div_class
             {
-              margin: 0px;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              margin-left: -512px;
+              margin-top: -384px;
               padding: 0px;
               border: 0px;
             }
@@ -72,7 +74,7 @@
 
     <body>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
-        <img src="JAM/splash.png" id="GM4HTML5_loadingscreen" alt="smilegame:HTML5 loading screen" style="display:none;"/>
+        <img src="SAM/splash.png" id="GM4HTML5_loadingscreen" alt="smilegame:HTML5 loading screen" style="display:none;"/>
             <!-- Create the canvas element the game draws to -->
             <canvas id="canvas" width="1024" height="768">
                <p>Your browser doesn't support HTML5 .</p>
@@ -80,9 +82,9 @@
         </div>
 
         <!-- Run the game code -->
-        <script type="text/javascript" src="JAM/index.js?HFBYB=243841099"></script>
-		<script>document.body.setAttribute("style","-ms-touch-action: none;");</script>
-		<script>
+        <script type="text/javascript" src="SAM/index.js?HFBYB=243841099"></script>
+
+<script>
 function onLoad() {
 if(( /(ipad|iphone|ipod|android)/i.test(navigator.userAgent) )) {
 document.addEventListener('deviceready', initApp, false);
@@ -114,7 +116,7 @@ interstitialAdId: admobid.interstitial,
 adSize: 'SMART_BANNER',
 // width: integer, // valid when set adSize 'CUSTOM'
 // height: integer, // valid when set adSize 'CUSTOM'
-position: AdMob.AD_POSITION.TOP,
+position: AdMob.AD_POSITION.BOTTOM_CENTER,
 // x: integer, // valid when set position to 0 / POS_XY
 // y: integer, // valid when set position to 0 / POS_XY
 isTesting: false, // set to true, to receiving test ad for testing purpose
@@ -124,5 +126,6 @@ AdMob.setOptions( defaultOptions );
 
 }
 </script>
+
     </body>
 </html>
